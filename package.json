@@ -2,8 +2,9 @@
   "name": "cursor-skills-sync",
   "displayName": "SkillBridge: Cursor Skills Sync",
   "description": "Sync Cursor and agent skills across machines using a GitHub repository.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "fqueis",
+  "license": "MIT",
   "icon": "media/icon.png",
   "repository": {
     "type": "git",

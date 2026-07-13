@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Declare MIT license so Open VSX accepts the package
+- Include `LICENSE` in the VSIX (remove `--skip-license` from packaging)
+
 ## 1.0.0
 
 - Initial release of SkillBridge: Cursor Skills Sync

@@ -15,7 +15,7 @@ mkdirSync(outDir, { recursive: true });
 
 const result = spawnSync(
   process.execPath,
-  [vsceCli, 'package', '--no-dependencies', '--skip-license', '--out', outFile],
+  [vsceCli, 'package', '--no-dependencies', '--out', outFile],
   {
     cwd: root,
     stdio: 'inherit',
