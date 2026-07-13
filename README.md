@@ -14,8 +14,8 @@ Sync your **Cursor and agent skills** across machines using a GitHub repository.
 
 ## Install
 
-- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=felipequeis.cursor-skills-sync)
-- [Open VSX Registry](https://open-vsx.org/extension/felipequeis/cursor-skills-sync)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=fqueis.cursor-skills-sync)
+- [Open VSX Registry](https://open-vsx.org/extension/fqueis/cursor-skills-sync)
 
 If SkillBridge helps you, please leave a **5-star** review. It improves discoverability for everyone.
 
@@ -61,3 +61,7 @@ That way another machine restores each skill into the same kind of folder.
 - `SkillBridge: Push Skills`
 - `SkillBridge: Pull Skills`
 - `SkillBridge: Check Sync Status`
+
+## Publishing
+
+Store release steps (Marketplace + Open VSX + GitHub secrets): [PUBLISHING.md](PUBLISHING.md).
