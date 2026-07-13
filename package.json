@@ -1,0 +1,98 @@
+{
+  "name": "cursor-skills-sync",
+  "displayName": "SkillBridge: Cursor Skills Sync",
+  "description": "Sync Cursor and agent skills across machines using a GitHub repository.",
+  "version": "1.0.0",
+  "publisher": "fqueis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fqueis/cursor-skills-sync"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "cursor",
+    "skills",
+    "sync",
+    "github",
+    "skillbridge"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "skillBridge.showMenu",
+        "title": "SkillBridge: Open Menu"
+      },
+      {
+        "command": "skillBridge.setupRepo",
+        "title": "SkillBridge: Configure GitHub Repository"
+      },
+      {
+        "command": "skillBridge.updateToken",
+        "title": "SkillBridge: Update GitHub Token"
+      },
+      {
+        "command": "skillBridge.push",
+        "title": "SkillBridge: Push Skills"
+      },
+      {
+        "command": "skillBridge.pull",
+        "title": "SkillBridge: Pull Skills"
+      },
+      {
+        "command": "skillBridge.checkStatus",
+        "title": "SkillBridge: Check Sync Status"
+      }
+    ],
+    "configuration": {
+      "title": "SkillBridge",
+      "properties": {
+        "skillBridge.skillsPaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "~/.cursor/skills",
+            "~/.agents/skills"
+          ],
+          "description": "Local skills folders to sync. Known paths map to skills/cursor and skills/agents in the GitHub repo so each machine restores the same layout."
+        },
+        "skillBridge.githubRepository": {
+          "type": "string",
+          "default": "",
+          "description": "GitHub repository used for sync (owner/repo). Leave empty to configure later."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "compile": "tsc -p ./ --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "pnpm run build && node scripts/package-vsix.mjs",
+    "vscode:prepublish": "pnpm run build"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.30",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.3.2",
+    "esbuild": "^0.25.2",
+    "ovsx": "^0.10.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}

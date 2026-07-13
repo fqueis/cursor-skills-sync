@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "paths": {
+      "@commands/*": ["./src/commands/*"],
+      "@config/*": ["./src/config/*"],
+      "@fs/*": ["./src/fs/*"],
+      "@github/*": ["./src/github/*"],
+      "@sync/*": ["./src/sync/*"],
+      "@ui/*": ["./src/ui/*"],
+      "@constants": ["./src/constants.ts"]
+    },
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
