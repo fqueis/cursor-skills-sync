@@ -44,10 +44,10 @@ export const PROTECTED_ROOT_PATHS = new Set([
 
 /** Store listing URLs used in the managed skills-repo README. */
 export const MARKETPLACE_URL =
-  'https://marketplace.visualstudio.com/items?itemName=felipequeis.cursor-skills-sync';
+  'https://marketplace.visualstudio.com/items?itemName=fqueis.cursor-skills-sync';
 
 export const OPEN_VSX_URL =
-  'https://open-vsx.org/extension/felipequeis/cursor-skills-sync';
+  'https://open-vsx.org/extension/fqueis/cursor-skills-sync';
 
 /** globalState key for the last successful sync baseline. */
 export const SYNC_STATE_KEY = 'skillBridge.syncState';
