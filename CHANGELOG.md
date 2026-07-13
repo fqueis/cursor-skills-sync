@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Create a GitHub Release on each `v*` publish tag and attach the packaged `.vsix`
+- Document the automatic GitHub Release step in `PUBLISHING.md`
+
 ## 1.0.1
 
 - Declare MIT license so Open VSX accepts the package

@@ -1,6 +1,6 @@
 # Publishing SkillBridge (Marketplace + Open VSX)
 
-This repo publishes automatically via [`.github/workflows/publish.yml`](.github/workflows/publish.yml) when you push a version tag matching `v*` (example: `v1.0.0`).
+This repo publishes automatically via [`.github/workflows/publish.yml`](.github/workflows/publish.yml) when you push a version tag matching `v*` (example: `v1.0.0`). After Marketplace and Open VSX succeed, the same job creates a **GitHub Release** for that tag and attaches the packaged `.vsix`.
 
 Your `package.json` publisher id is **`fqueis`**. That same id must exist on both stores.
 
@@ -195,6 +195,7 @@ Then:
 3. Check:
    - Marketplace: `https://marketplace.visualstudio.com/items?itemName=fqueis.cursor-skills-sync`
    - Open VSX: `https://open-vsx.org/extension/fqueis/cursor-skills-sync`
+   - GitHub Release for the tag (includes the `.vsix` asset and `CHANGELOG.md` notes)
 
 ## 5) Later releases
 

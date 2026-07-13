@@ -9,7 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -42,3 +42,13 @@ jobs:
 
       - name: Publish to Open VSX
         run: pnpm exec ovsx publish "$(ls builds/*.vsix | head -n 1)" -p ${{ secrets.OVSX_PAT }}
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VSIX="$(ls builds/*.vsix | head -n 1)"
+          gh release create "${{ github.ref_name }}" "$VSIX" \
+            --title "${{ github.ref_name }}" \
+            --notes-file CHANGELOG.md \
+            --verify-tag
