@@ -4,6 +4,7 @@
   "description": "Sync Cursor and agent skills across machines using a GitHub repository.",
   "version": "1.0.0",
   "publisher": "fqueis",
+  "icon": "media/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/fqueis/cursor-skills-sync"
